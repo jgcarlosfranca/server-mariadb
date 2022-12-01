@@ -1,21 +1,24 @@
 {
-  "name": "server",
-  "version": "1.0.0",
-  "description": "server para consumo de banco mariaDb para portal react com mariaDb",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "joao gabriel carlos franca",
-  "license": "ISC",
-  "dependencies": {
-    "bcrypt": "^5.1.0",
-    "body-parser": "^1.20.1",
-    "cookie-parser": "^1.4.6",
-    "cors": "^2.8.5",
-    "express": "^4.18.2",
-    "jsonwebtoken": "^8.5.1",
-    "mariadb": "^3.0.2",
-    "nodemon": "^2.0.20"
-  }
+    "name": "server",
+    "version": "1.0.0",
+    "description": "server para consumo de banco mariaDb para portal react com mariaDb",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "startDev": "nodemon index.js",
+        "startTeste": "set NODE_ENV=teste&&nodemon index.js"
+    },
+    "author": "joao gabriel carlos franca",
+    "license": "ISC",
+    "dependencies": {
+        "bcrypt": "^5.1.0",
+        "body-parser": "^1.20.1",
+        "cookie-parser": "^1.4.6",
+        "cors": "^2.8.5",
+        "dotenv": "^16.0.3",
+        "express": "^4.18.2",
+        "jsonwebtoken": "^8.5.1",
+        "mariadb": "^3.0.2",
+        "nodemon": "^2.0.20"
+    }
 }
