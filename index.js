@@ -1,8 +1,11 @@
+require('dotenv').config({
+    path: process.env.NODE_ENV === "teste" ? ".env.testing" : ".env"
+})
 const express = require("express")
 const cors = require('cors')
 const routes = require("./routes/routes")
 const cookieParser = require("cookie-parser")
-const { SERVER_PORT_BACKEND, FRONT_ENDPOINT } = require("./utils/constants")
+const { FRONT_ENDPOINT } = require("./utils/constants")
 
 const app = express()
 
@@ -19,6 +22,14 @@ app.use(cookieParser())
 
 app.use("/", routes)
 
-app.listen(SERVER_PORT_BACKEND, () => {
-    console.log(`Server UP na porta ${SERVER_PORT_BACKEND}`)
+app.listen(process.env.PORT, () => {
+    console.log(`Server UP na porta ${process.env.PORT}`)
 })
+
+
+/**
+ * 
+require('dotenv').config({  
+  path: process.env.NODE_ENV === "test" ? ".env.testing" : ".env"
+})
+ */
